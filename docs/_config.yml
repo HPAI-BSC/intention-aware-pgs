@@ -20,15 +20,15 @@ plugins:
 - jekyll-remote-theme
 
 # Site settings
-url: 'https://mydomain.com'
-baseurl: ''
+url: 'https://hpai-bsc.github.io'
+baseurl: 'intention-aware-pgs'
 title: 'HPAI'
 description: ''
 permalink: pretty
 logo: "https://www.hpai.bsc.es/images/hpai_logo.png?h=50"
 
 favicons:
-  256: 'intention-aware-pgs/assets/favicon.ico'
+  256: '/assets/favicon.ico'
 
 # Pagination
 paginate: 5
