@@ -21,11 +21,11 @@ plugins:
 
 # Site settings
 url: 'https://hpai-bsc.github.io'
-baseurl: 'intention-aware-pgs'
+baseurl: '/intention-aware-pgs'
 title: 'HPAI'
 description: ''
 permalink: pretty
-logo: "/../assets/logo.png"
+logo: "/assets/logo.png"
 
 favicons:
   256: '/assets/favicon.ico'

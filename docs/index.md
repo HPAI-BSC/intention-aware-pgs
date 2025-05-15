@@ -2,8 +2,16 @@
 title: ""
 feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
-  ## title
-  author1, author2, author3
+  ## Policy Graphs and Intention: answering ’why’ and ’how’ from a telic perspective
+  Victor Gimenez-Abalos<sup>*1</sup>, Sergio Alvarez-Napagao<sup>1,2</sup>, Adrián Tormos<sup>1</sup>, <br> Ulises Cortés<sup>1,2</sup>, Javier Vazquez-Salceda<sup>1</sup>
+  <small>
+    <br>
+    <sup>*</sup>Corresponding author
+    <br>
+    <sup>1</sup>Barcelona Supercomputing Center
+    <br>
+    <sup>2</sup>Universitat Politècnica de Catalunya
+  </small>
   
 ---
 
@@ -12,22 +20,28 @@ feature_text: |
 
 ### Abstract
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consectetur scelerisque leo. Maecenas quis commodo elit.
-> Mauris ac libero nisi. Maecenas accumsan tellus ut nisl sagittis fermentum nec eget lorem. Nam vitae blandit sapien. 
-> Suspendisse a sem vitae purus lacinia fermentum in eu purus. Vestibulum viverra imperdiet ultrices. Integer ut magna 
-> id risus accumsan porta. Etiam sit amet arcu ac magna iaculis sodales. Integer vestibulum ex in pharetra ultricies. 
-> Donec facilisis, augue non facilisis semper, ipsum neque iaculis felis, in elementum dolor lorem at nisi. Interdum et 
-> malesuada fames ac ante ipsum primis in faucibus. Donec mollis semper risus, finibus fermentum velit porta eget. Etiam
-> interdum dapibus nisi at sodales. Ut imperdiet libero quam, quis sollicitudin enim consequat in. Duis varius, odio 
-> eget varius lacinia, purus metus congue augue, quis porttitor arcu lacus eget erat. Aenean rutrum felis vitae dolor 
-> facilisis, eu porttitor metus bibendum. Mauris id lacus lectus. Integer quis vehicula nulla. Curabitur a sem id lacus 
-> eleifend sollicitudin sagittis ut eros. Proin pellentesque, lorem vel vestibulum tempus, eros ligula vestibulum est, 
-> sed tincidunt orci orci at felis. Phasellus id luctus ante. Fusce congue blandit condimentum. Nulla mollis, ante ut 
-> gravida faucibus, tortor augue accumsan odio, id sodales urna velit id arcu. Nunc eget odio et dui cursus scelerisque 
-> sed id dolor. Fusce suscipit eros id sagittis vehicula. 
+> Agents are a special kind of AI-based software in that they interact in complex environments and have increased potential for emergent behaviour. 
+Explaining such behaviour is key to deploying trustworthy AI, but the increasing complexity and opaque nature of many agent implementations makes this hard. 
+In this work, we reuse the Policy Graphs method --which can be used to explain opaque agent behaviour-- and enhance it to query it with hypotheses of desirable situations. These hypotheses are used to compute a numerical value to examine agent intentions at any particular moment, as a function of how likely the agent is to bring about a hypothesised desirable situation. We emphasise the relevance of how this approach has full epistemic traceability, and each belief used by the algorithms providing answers is backed by specific facts from its construction process.
+We show the numeric approach provides a robust and intuitive way
+to provide telic explainability (explaining current actions from the perspective of bringing about situations), and allows to evaluate the interpretability of behaviour of the agent based on the explanations; and it opens the door to explainability that is useful not only to the human, but to an agent.
 
 ### Cite as
 
 ```
-your bibtex here
+@inproceedings{gimenez_intention_aware_2025,
+author = {Gimenez-Abalos, Victor and Alvarez-Napagao, Victor and Tormos, Adrian and Cortés, Ulises and Vázquez-Salceda, Javier},
+title = {Policy Graphs and Intention: answering ‘why’ and ‘how’ from a telic perspective},
+year = {2025},
+isbn = {},
+publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+address = {Richland, SC},
+abstract = {},
+booktitle = {Proceedings of the 24rd International Conference on Autonomous Agents and Multiagent Systems},
+pages = {},
+numpages = {},
+keywords = {},
+location = {Detroit, United States of America},
+series = {AAMAS '25}
+}
 ```
