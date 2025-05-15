@@ -18,6 +18,7 @@ plugins:
 - jekyll-include-cache
 - jemoji
 - jekyll-remote-theme
+- jekyll-youtube
 
 # Site settings
 url: 'https://hpai-bsc.github.io'
