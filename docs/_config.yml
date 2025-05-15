@@ -25,7 +25,7 @@ baseurl: 'intention-aware-pgs'
 title: 'HPAI'
 description: ''
 permalink: pretty
-logo: "../assets/logo.png"
+logo: "/../assets/logo.png"
 
 favicons:
   256: '/assets/favicon.ico'
