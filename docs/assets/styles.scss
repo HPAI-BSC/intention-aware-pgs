@@ -1,0 +1,71 @@
+---
+title: false
+styles: true
+---
+
+
+$headingtype: (
+  font-family: "Roboto, sans-serif",
+  regular: 400,
+  bold: 700,
+  italic: italic,
+  cap-height: 0.75
+) !default;
+
+$bodytype: (
+  font-family: "Helvetica, sans-serif",
+  regular: 400,
+  bold: 700,
+  italic: italic,
+  cap-height: 0.75
+) !default;
+
+.hello-world {
+  horiz-align: left;
+  text-align: left;
+}
+
+//.header {
+//  align-items: start;
+//}
+
+@import "alembic";
+
+
+.typeset code {
+    font-size: small;
+    line-height: 1em;
+    display: block;
+}
+
+.header {
+  background-color: #181b21;
+}
+
+.header .feature {
+  margin-bottom: 0;
+}
+
+//.header {
+//  .container {
+//    justify-content: left;
+//    vertical-align: center;
+//    align-items: start;
+//  }
+//}
+
+.logo img {
+  max-height: 2em;
+}
+
+.main p {
+    font-size: large;
+    line-height: 1.5em;
+}
+
+.button {
+  font-size: medium;
+  padding: 0px 7px;
+  border-radius: 5px;
+  line-height: 2em;
+}
