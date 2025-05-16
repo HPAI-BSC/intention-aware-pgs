@@ -44,21 +44,21 @@ be attained.
 In this work, we operationalise intention as the probability that a desire be fulfilled in the future of a given state.
 We use Policy Graphs (PG) as a model to estimate probabilities of actions and transitions (P(s'|a,s), P(a|s)) such that
 we can compute the probability of any trajectory culminating on a desirable transition in the graph, for any possible
-state: for a desire `d`, and a state `s`, there is an intention `I_d(s)` (which follows axioms of probability).
+state: for a desire _d_, and a state _s_, there is an intention _I_d(s)_ (which follows axioms of probability).
 
 ### Evaluation, metrics, and XAI
 
-In order to evaluate that an intention occurs, we impose a commitment threshold `C` as the minimum intention that a state
+In order to evaluate that an intention occurs, we impose a commitment threshold _C_ as the minimum intention that a state
 needs in order to say that an intention is _attributed_ to the agent in a state. 
-This doubles as a trade-of between interpretability and reliability. At higher `C`, the explainee is skeptic 
+This doubles as a trade-of between interpretability and reliability. At higher _C_, the explainee is skeptic 
 toward explanations, intentions are less often attributed (and hence part of answers to explainability), but they are
 more frequently intentions that come to be fulfilled.
 
 We use this intention to answer questions such as: 
-* What does the agent intend to do at state `s`? Any intention that is _attributed_ in `s` (`I_d(s)>C`).
-* Why would it do `a` at `s`? The intentions attributed in `s` that are expected to increase by using `a`
-* How would the agent fulfill `d` from `s`? A plausible sequence of actions and states the PG believes will occur such 
-that `d` is brought about, starting at `s`.
+* What does the agent intend to do at state _s_? Any intention that is _attributed_ in _s_ (_I_d(s)>C_).
+* Why would it do _a_ at _s_? The intentions attributed in _s_ that are expected to increase by using _a_
+* How would the agent fulfill _d_ from _s_? A plausible sequence of actions and states the PG believes will occur such 
+that _d_ is brought about, starting at _s_.
 
 ### Cite as
 
