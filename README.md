@@ -18,7 +18,7 @@ working directory (not src).
 
 In addition to reproducing results, the setup allows to test in 3 more layouts:
 
-![layouts](logs/imgs/layouts.png)
+![layouts](docs/assets/layouts.png)
 From left to right: simple, random1, random3, unident_s, and random0. Only simple and random0 are used in the
 paper due to space constraints exclusively.
 
