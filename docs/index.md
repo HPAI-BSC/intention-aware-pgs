@@ -30,6 +30,41 @@ to provide telic explainability (explaining current actions from the perspective
 
 <iframe width="502" height="282" src="https://www.youtube.com/embed/FOZkfVnE3vA" title="pgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+# Motivating example
+Consider the following scenario. You are watching a chef work in the kitchen. He toils away at the cutting board,
+prepares ingredients over the counter-top... until you see him fill a cooking pot with water. You surmise that it will
+take part in the recipe, possibly to boil water and do something with it. You ask the chef: Why did you feel that pot?
+Befuddlingly, he responds:
+
+`Because the hob was unused, and the pot was empty.`
+
+This kind of responses are a staple of explainable agency. Especially when working with explaining opaque agents, or
+coming up with agent-agnostic methods, explainable agency focuses on which elements of the current state seem
+to be relevant for the action (in this case, filling the pot). Rather than illuminate the explainee, it leaves them 
+confused. Instead, what he'd have expected would be something akin to:
+
+`Because I am going to cook pasta.`
+
+We humans are able to attribute that sort of intentionality easily, simply via observation: without the need to ask, by
+simply observing the countertop and locating the dry pasta, we could have arrived at the same conclusion. Moreso, the
+task of cooking pasta, albeit desirable (who doesn't love some good carbonara), is not the sole reason of existence of
+the cook: therefore, when doing this attribution, we would be hypothesising that such seems desirable and is going to 
+happen. 
+
+We should also take into consideration that, even if such a desire or goal existed, there may be things (such as)
+the building catching fire) that would result in the desire not being fulfilled. Hence, it would be nice to also know 
+how much intention is there behind the actions: will he stop making pasta if he gets a phone call that a friend is 
+bringing take-out? Has he already cooked some spoilables, and hence is determined to use them despite the call?
+
+With these questions in mind, we want a model that, like humans, is capable of attributing intentions, and can be used
+to reference desires, milestones, goals, etc. that an explainee will understand as part of their outcome. When we have
+these intentions, we will be able to reply to questions like:
+
+* What do you intend to do now? _I intend to boil water, cook pasta, and serve a plate of carbonara._
+* Why are you filling the pot with water? _I need it to boil water._
+* How are you going to boil water? _I will place the pot with water on the hob, turn it on, then go back to chopping the 
+guanciale. By the time I end, the water will be boiling._
+
 ## Intention Policy Graphs (IPG)
 
 IPGs are a simple model for understanding telic (that is, long-term) agent behaviour. The gist is: if an explainee would 
