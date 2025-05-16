@@ -99,7 +99,7 @@ that _d_ is brought about, starting at _s_.
 
 ```
 @inproceedings{gimenez_intention_aware_2025,
-author = {Gimenez-Abalos, Victor and Alvarez-Napagao, Victor and Tormos, Adrian and Cortés, Ulises and Vázquez-Salceda, Javier},
+author = {Gimenez-Abalos, Victor and Alvarez-Napagao, Sergio and Tormos, Adrian and Cortés, Ulises and Vázquez-Salceda, Javier},
 title = {Policy Graphs and Intention: answering ‘why’ and ‘how’ from a telic perspective},
 year = {2025},
 isbn = {},
