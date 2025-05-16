@@ -15,7 +15,9 @@ def what_experiment(pg, node_idx, C_threshold):
 def how_experiment(pg, node_idx, desire):
     node = pg.nodes[node_idx]
     paths = node.answer_how(desires=[desire], stochastic=False)
-    printable_paths  = {}
+    if paths is None:
+        return
+    printable_paths = {}
     for desire, path in paths.items():
         print(path)
         curr_state = node
