@@ -46,7 +46,7 @@ confused. Instead, what he'd have expected would be something akin to:
 > Because I am going to cook pasta.
 
 We humans are able to attribute that sort of intentionality easily, simply via observation: without the need to ask, by
-simply observing the countertop and locating the dry pasta, we could have arrived at the same conclusion. Moreso, the
+simply observing the counter top and locating the dry pasta, we could have arrived at the same conclusion. Moreso, the
 task of cooking pasta, albeit desirable (who doesn't love some good carbonara), is not the sole reason of existence of
 the cook: therefore, when doing this attribution, we would be hypothesising that such seems desirable and is going to 
 happen. 
