@@ -95,7 +95,7 @@ class Node:
         return {d: val for d, val in self.intention.items() if val >= c_threshold}
 
     def answer_how(self, desires, stochastic=False, c_threshold=None, num_paths_per_desire=10):
-        # C_threshold and num_paths are only used if stochastic
+        # num_paths are only used if stochastic
         if stochastic:
             to_return = dict()
             for d in desires:
@@ -113,19 +113,29 @@ class Node:
             for desire in desires:
                 clause, action_idx = desire.clause, desire.action_idx
                 d_name = desire.name
+                try:
+                    if self.intention[d_name]<c_threshold:
+                        print('Intention to', d_name, 'is not attributed to state', self.node_id)
+                        return
+                except KeyError:
+                    print('Intention to', d_name, 'is not attributed to state', self.node_id)
+                    return
                 if self.check_desire(desire_clause=clause, action_id=action_idx) is not None:
                     how_paths_per_desire[d_name] = [[action_idx, None, None]]  # Desire will get fulfilled here
                     continue
                 best_node, best_action, best_intention = None, None, 0
                 for descendant, action in self.descendants():
-                    desc_intention = descendant.intention[d_name]
-                    if desc_intention > best_intention:
-                        best_node, best_action, best_intention = descendant, action, desc_intention
-                    elif desc_intention == best_intention:
-                        # if there's a more probable action choose that one
-                        action_probabilities = self.get_action_probability()
-                        if action_probabilities[action] > action_probabilities[best_action]:
+                    try:
+                        desc_intention = descendant.intention[d_name]
+                        if desc_intention > best_intention:
                             best_node, best_action, best_intention = descendant, action, desc_intention
+                        elif desc_intention == best_intention:
+                            # if there's a more probable action choose that one
+                            action_probabilities = self.get_action_probability()
+                            if action_probabilities[action] > action_probabilities[best_action]:
+                                best_node, best_action, best_intention = descendant, action, desc_intention
+                    except KeyError:
+                        continue
                 tail = best_node.answer_how([desire])[d_name]
                 how_paths_per_desire[d_name] = [[best_action, best_node, best_intention]] + tail
             return how_paths_per_desire
