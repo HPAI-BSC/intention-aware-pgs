@@ -50,6 +50,13 @@ $bodytype: (
   margin-bottom: 0;
 }
 
+.header .feature h2 {
+  color: white;
+}
+.header .feature p {
+  color: white;
+}
+
 //.header {
 //  .container {
 //    justify-content: left;
@@ -76,4 +83,41 @@ $bodytype: (
 
 .main ul {
     font-size: large;
+}
+
+.grid {
+  display: flex;
+ }
+div.col-1 {
+  width: 50%;
+  max-width: 50%;
+}
+.col-2 {
+  flex: 1;
+  margin-left: 20px;
+}
+
+div.screenshot {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+p.results-text {
+  padding-left: 10px;
+  font-size: 12pt;
+}
+
+span.results-text.indented {
+  padding-left: 20px;
+}
+
+.desire-none {
+  color: darkred;
+}
+.desire-moderate {
+  color: #b89920;
+}
+.desire-high {
+  color: #2c812c;
 }

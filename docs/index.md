@@ -1,6 +1,6 @@
 ---
 title: ""
-feature_image: "https://picsum.photos/1300/400?image=989"
+feature_image: "https://picsum.photos/id/88/1280/?blur=3"
 feature_text: |
   ## Policy Graphs and Intention: answering ’why’ and ’how’ from a telic perspective
   Victor Gimenez-Abalos<sup>*1</sup>, Sergio Alvarez-Napagao<sup>1,2</sup>, Adrián Tormos<sup>1</sup>, <br> Ulises Cortés<sup>1,2</sup>, Javier Vazquez-Salceda<sup>1</sup>
@@ -13,7 +13,7 @@ feature_text: |
     <sup>2</sup>Universitat Politècnica de Catalunya
   </small>
   
----
+--- 
 
 
 {% include button.html text="Paper" link="" color="#4f2121"  %} {% include button.html text="Code" link="https://github.com/HPAI-BSC/intention-aware-pgs" color="#113662"  %} {% include button.html text="Pgeon Library" link="https://github.com/hpai-bsc/pgeon" color="#113662"  %} {% include button.html text="BlueSky" link="https://bsky.app/profile/hpai.bsky.social" color="rgb(32, 139, 254)" %}  {% include button.html text="Linkedin" link="https://www.linkedin.com/company/hpai" color="#0a66c2" %}
@@ -94,6 +94,33 @@ We use this intention to answer questions such as:
 * Why would it do _a_ at _s_? The intentions attributed in _s_ that are expected to increase by using _a_
 * How would the agent fulfill _d_ from _s_? A plausible sequence of actions and states the PG believes will occur such 
 that _d_ is brought about, starting at _s_.
+
+<div class="grid">
+    <div class="col-1 screenshot">
+        <div class="screenshot">
+            <img class="screenshot" src="assets/screenshots/149.png">
+        </div>
+        <p class="results-text">
+            ‣ What does it intend to do?
+            <br>
+            <span class="results-text indented">Desire to <span style="color: #5A5AA2"><b>SERVE SOUP</b></span>: <span class="desire-moderate"><b>0.625</b></span></span>
+            <br><br>
+            ‣ Why would it <span style="color: #4A6551"><b>INTERACT</b></span>?
+            <br>
+            <span class="results-text indented">Intentions attributed for <span style="color: #5A5AA2"><b>SERVING SOUP</b></span> expected to increase by <span class="desire-high"><b>0.05</b></span>.</span>
+            <br><br>
+            ‣ How would it fulfill its desire to <span style="color: #5A5AA2"><b>SERVE SOUP</b></span>?
+            <br>
+            <span class="results-text indented">By performing the following chain of actions:</span>
+            <span class="results-text indented"><span style="color: #4A6551"><b>INTERACT</b></span> → <span style="color: #d167a4"><b>DOWN</b></span> → <span style="color: #d167a4"><b>RIGHT</b></span> → <span style="color: #d167a4"><b>DOWN</b></span> → <span style="color: #4A6551"><b>INTERACT</b></span></span>
+        </p>
+        <p>
+        </p>
+    </div>
+    <div class="col-2">
+    </div>
+</div>
+
 
 ### Cite as
 
