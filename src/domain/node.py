@@ -136,7 +136,7 @@ class Node:
                                 best_node, best_action, best_intention = descendant, action, desc_intention
                     except KeyError:
                         continue
-                tail = best_node.answer_how([desire])[d_name]
+                tail = best_node.answer_how([desire], c_threshold=c_threshold)[d_name]
                 how_paths_per_desire[d_name] = [[best_action, best_node, best_intention]] + tail
             return how_paths_per_desire
 
