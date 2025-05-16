@@ -16,7 +16,7 @@ feature_text: |
 ---
 
 
-{% include button.html text="Paper" link="" color="#4f2121"  %} {% include button.html text="Code" link="https://github.com/hpai-bsc/pgeon" color="#113662"  %} {% include button.html text="BlueSky" link="https://bsky.app/profile/hpai.bsky.social" color="rgb(32, 139, 254)" %}  {% include button.html text="Linkedin" link="https://www.linkedin.com/company/hpai" color="#0a66c2" %}
+{% include button.html text="Paper" link="" color="#4f2121"  %} {% include button.html text="Code" link="https://github.com/HPAI-BSC/intention-aware-pgs" color="#113662"  %} {% include button.html text="Pgeon Library" link="https://github.com/hpai-bsc/pgeon" color="#113662"  %} {% include button.html text="BlueSky" link="https://bsky.app/profile/hpai.bsky.social" color="rgb(32, 139, 254)" %}  {% include button.html text="Linkedin" link="https://www.linkedin.com/company/hpai" color="#0a66c2" %}
 
 # Abstract
 
