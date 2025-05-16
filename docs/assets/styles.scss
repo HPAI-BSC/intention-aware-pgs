@@ -38,6 +38,10 @@ $bodytype: (
     display: block;
 }
 
+.typeset p a {
+    text-shadow: 0.1rem 0 white;
+}
+
 .header {
   background-color: #181b21;
 }
@@ -68,4 +72,8 @@ $bodytype: (
   padding: 0px 7px;
   border-radius: 5px;
   line-height: 2em;
+}
+
+.main ul {
+    font-size: large;
 }

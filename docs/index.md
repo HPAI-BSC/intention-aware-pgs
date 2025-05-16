@@ -18,7 +18,7 @@ feature_text: |
 
 {% include button.html text="Paper" link="" color="#4f2121"  %} {% include button.html text="Code" link="https://github.com/hpai-bsc/pgeon" color="#113662"  %} {% include button.html text="BlueSky" link="https://bsky.app/profile/hpai.bsky.social" color="rgb(32, 139, 254)" %}  {% include button.html text="Linkedin" link="https://www.linkedin.com/company/hpai" color="#0a66c2" %}
 
-### Abstract
+# Abstract
 
 > Agents are a special kind of AI-based software in that they interact in complex environments and have increased potential for emergent behaviour. 
 Explaining such behaviour is key to deploying trustworthy AI, but the increasing complexity and opaque nature of many agent implementations makes this hard. 
@@ -26,7 +26,7 @@ In this work, we reuse the Policy Graphs method --which can be used to explain o
 We show the numeric approach provides a robust and intuitive way
 to provide telic explainability (explaining current actions from the perspective of bringing about situations), and allows to evaluate the interpretability of behaviour of the agent based on the explanations; and it opens the door to explainability that is useful not only to the human, but to an agent.
 
-### Video explanation
+# Video explanation
 
 <iframe width="502" height="282" src="https://www.youtube.com/embed/FOZkfVnE3vA" title="pgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -36,14 +36,14 @@ prepares ingredients over the counter-top... until you see him fill a cooking po
 take part in the recipe, possibly to boil water and do something with it. You ask the chef: Why did you feel that pot?
 Befuddlingly, he responds:
 
-`Because the hob was unused, and the pot was empty.`
+> Because the hob was unused, and the pot was empty.
 
 This kind of responses are a staple of explainable agency. Especially when working with explaining opaque agents, or
 coming up with agent-agnostic methods, explainable agency focuses on which elements of the current state seem
 to be relevant for the action (in this case, filling the pot). Rather than illuminate the explainee, it leaves them 
 confused. Instead, what he'd have expected would be something akin to:
 
-`Because I am going to cook pasta.`
+> Because I am going to cook pasta.
 
 We humans are able to attribute that sort of intentionality easily, simply via observation: without the need to ask, by
 simply observing the countertop and locating the dry pasta, we could have arrived at the same conclusion. Moreso, the
@@ -90,7 +90,7 @@ toward explanations, intentions are less often attributed (and hence part of ans
 more frequently intentions that come to be fulfilled.
 
 We use this intention to answer questions such as: 
-* What does the agent intend to do at state _s_? Any intention that is _attributed_ in _s_ (_I_d(s)>C_).
+* What does the agent intend to do at state _s_? Any intention that is _attributed_ in _s_ (<i>I<sub>d</sub>(s)>C</i>).
 * Why would it do _a_ at _s_? The intentions attributed in _s_ that are expected to increase by using _a_
 * How would the agent fulfill _d_ from _s_? A plausible sequence of actions and states the PG believes will occur such 
 that _d_ is brought about, starting at _s_.

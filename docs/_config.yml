@@ -23,7 +23,7 @@ plugins:
 url: 'https://hpai-bsc.github.io'
 baseurl: '/intention-aware-pgs'
 title: 'HPAI'
-description: ''
+description: 'Policy Graphs and Intention: answering ’why’ and ’how’ from a telic perspective'
 permalink: pretty
 logo: "/assets/logo.png"
 
