@@ -96,10 +96,12 @@ We use this intention to answer questions such as:
 that _d_ is brought about, starting at _s_.
 
 <div class="grid">
-    <div class="col-1 screenshot">
+    <div class="col-1">
         <div class="screenshot">
             <img class="screenshot" src="assets/screenshots/149.png">
         </div>
+    </div>
+    <div class="col-2">
         <p class="results-text">
             ‣ What does it intend to do?
             <br>
@@ -107,17 +109,38 @@ that _d_ is brought about, starting at _s_.
             <br><br>
             ‣ Why would it <span style="color: #4A6551"><b>INTERACT</b></span>?
             <br>
-            <span class="results-text indented">Intentions attributed for <span style="color: #5A5AA2"><b>SERVING SOUP</b></span> expected to increase by <span class="desire-high"><b>0.05</b></span>.</span>
+            <span class="results-text indented">Intentions attributed for <span style="color: #5A5AA2"><b>SERVING SOUP</b></span></span><br><span class="results-text indented">expected to increase by <span class="desire-moderate"><b>0.05</b></span>.</span>
             <br><br>
-            ‣ How would it fulfill its desire to <span style="color: #5A5AA2"><b>SERVE SOUP</b></span>?
+            ‣ How would it fulfill its desire?
             <br>
             <span class="results-text indented">By performing the following chain of actions:</span>
-            <span class="results-text indented"><span style="color: #4A6551"><b>INTERACT</b></span> → <span style="color: #d167a4"><b>DOWN</b></span> → <span style="color: #d167a4"><b>RIGHT</b></span> → <span style="color: #d167a4"><b>DOWN</b></span> → <span style="color: #4A6551"><b>INTERACT</b></span></span>
-        </p>
-        <p>
+            <span class="results-text indented"><span style="color: #4A6551"><b>INTERACT</b></span> → <span style="color: #d167a4"><b>DOWN</b></span> → <span style="color: #d167a4"><b>RIGHT</b></span></span><br><span class="results-text indented"> → <span style="color: #d167a4"><b>DOWN</b></span> → <span style="color: #4A6551"><b>INTERACT</b></span></span>
         </p>
     </div>
+</div>
+
+<div class="grid">
+    <div class="col-1">
+        <div class="screenshot">
+            <img class="screenshot" src="assets/screenshots/54.png">
+        </div>
+    </div>
     <div class="col-2">
+        <p class="results-text">
+            ‣ What does it intend to do?
+            <br>
+            <span class="results-text indented">Desire to <span style="color: #5A5AA2"><b>PUT ONION IN POT</b></span>: <span class="desire-low"><b>0.381</b></span></span>
+            <br><br>
+            ‣ Why would it <span style="color: #4A6551"><b>INTERACT</b></span>?
+            <br>
+            <span class="results-text indented">Intentions attributed for <span style="color: #5A5AA2"><b>PUTTING ONION IN</b></span></span><br><span class="results-text indented"><span style="color: #5A5AA2"><b>POT</b></span> expected to increase by <span class="desire-high"><b>0.31</b></span>.</span>
+            <br><br>
+            ‣ How would it fulfill its desire?
+            <br>
+            <span class="results-text indented">By performing the following chain of actions:</span>
+            <br>
+            <span class="results-text indented"><span style="color: #4A6551"><b>INTERACT</b></span> → <span style="color: #d167a4"><b>RIGHT</b> → </span><span style="color: #4A6551"><b>INTERACT</b></span></span>
+        </p>
     </div>
 </div>
 
