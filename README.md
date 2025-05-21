@@ -1,7 +1,10 @@
-# Policy graphs and Intention
-Supplementary material and code for Policy graphs and Intention, submitted to AAMAS 25'.
+# Policy Graphs and Intention: answering ’why’ and ’how’ from a telic perspective
 
-Included in it is a code for reproducing paper results, as well as more experimental results for other layouts, more 
+Gimenez-Abalos V., Alvarez-Napagao S., Tormos A., Cortes U., Vazquez-Salceda J. _Policy Graphs and Intention: answering ’why’ and ’how’ from a telic perspective_. In Proceedings of the 24rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS '25). 
+
+> Agents are a special kind of AI-based software in that they interact in complex environments and have increased potential for emergent behaviour. Explaining such behaviour is key to deploying trustworthy AI, but the increasing complexity and opaque nature of many agent implementations makes this hard. In this work, we reuse the Policy Graphs method –which can be used to explain opaque agent behaviour– and enhance it to query it with hypotheses of desirable situations. These hypotheses are used to compute a numerical value to examine agent intentions at any particular moment, as a function of how likely the agent is to bring about a hypothesised desirable situation. We emphasise the relevance of how this approach has full epistemic traceability, and each belief used by the algorithms providing answers is backed by specific facts from its construction process. We show the numeric approach provides a robust and intuitive way to provide telic explainability (explaining current actions from the perspective of bringing about situations), and allows to evaluate the interpretability of behaviour of the agent based on the explanations; and it opens the door to explainability that is useful not only to the human, but to an agent.
+
+Included in this repository is a code for reproducing paper results, as well as more experimental results for other layouts, more 
 analysed trajectories, etc.
 
 ## Setup
@@ -42,4 +45,24 @@ pip install --no-cache-dir --use-pep517 \
   --config-settings="--global-option=-I$(brew --prefix graphviz)/include/" \
   --config-settings="--global-option=-L$(brew --prefix graphviz)/lib/" \
   pygraphviz
+```
+
+## Cite as
+
+```
+@inproceedings{gimenez_intention_aware_2025,
+    author = {Gimenez-Abalos, Victor and Alvarez-Napagao, Sergio and Tormos, Adrian and Cortés, Ulises and Vázquez-Salceda, Javier},
+    title = {Policy Graphs and Intention: answering ‘why’ and ‘how’ from a telic perspective},
+    year = {2025},
+    isbn = {},
+    publisher = {International Foundation for Autonomous Agents and Multiagent Systems},
+    address = {Richland, SC},
+    abstract = {},
+    booktitle = {Proceedings of the 24rd International Conference on Autonomous Agents and Multiagent Systems},
+    pages = {},
+    numpages = {},
+    keywords = {},
+    location = {Detroit, United States of America},
+    series = {AAMAS '25}
+}
 ```
