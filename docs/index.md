@@ -79,15 +79,16 @@ be attained.
 In this work, we operationalise intention as the probability that a desire be fulfilled in the future of a given state.
 We use Policy Graphs (PG) as a model to estimate probabilities of actions and transitions (P(s'|a,s), P(a|s)) such that
 we can compute the probability of any trajectory culminating on a desirable transition in the graph, for any possible
-state: for a desire _d_, and a state _s_, there is an intention _I_d(s)_ (which follows axioms of probability).
+state: for a desire _d_, and a state _s_, there is an intention _I<sub>d</sub>(s)_ (which follows axioms of probability).
 
-### Evaluation, metrics, and XAI
+## XAI questions, evaluation and metrics
 
 In order to evaluate that an intention occurs, we impose a commitment threshold _C_ as the minimum intention that a state
 needs in order to say that an intention is _attributed_ to the agent in a state. 
 This doubles as a trade-of between interpretability and reliability. At higher _C_, the explainee is skeptic 
 toward explanations, intentions are less often attributed (and hence part of answers to explainability), but they are
-more frequently intentions that come to be fulfilled.
+more frequently intentions that come to be fulfilled. Handling and studying the trade-of is explained in the following 
+section.
 
 We use this intention to answer questions such as: 
 * What does the agent intend to do at state _s_? Any intention that is _attributed_ in _s_ (<i>I<sub>d</sub>(s)>C</i>).
@@ -143,6 +144,79 @@ that _d_ is brought about, starting at _s_.
         </p>
     </div>
 </div>
+
+
+### Metrics
+
+In order to study the trade-of, we simply compute two metrics:
+
+* **Attributed Intention Probability**: What is the probability that, at some point during execution, I am in
+a state that could answer explainability questions (regarding intention)? Ie. what is the
+probability that the state any (ie. at least one) intention above the commitment threshold? At lower thresholds, there
+is more attributed intention probability, we can ask more often, and the behaviour is more interpretable (even if the 
+interpretation is incorrect).
+* **Expected Intention Probability**: What is the probability that, once an intention is attributed to the agent,
+that it will be fulfilled? Note that, since intention is already that probability, what we are effectively computing
+is the expected intention value. At higher commitment thresholds, there will be less lower-intention states with attributed
+intention and hence higher expected intention; which translates in explanations being more often correct in what the agent
+will do.
+
+The value and trade-off between either is domain and even agent-dependant. In order to pick the most
+adequate commitment threshold, a ROC curve may be used to pick the most convenient threshold for a particular
+explainee or use-case.
+
+<img class="screenshot" src="assets/screenshots/ROC_simple.png">
+
+For the sake of our experiments, we always picked a commitment-threshold of 0.5, as it is reasonably high for reliability
+(above 80% for all cases), whilst providing reasonably high interpretability.
+
+In this plot, we can see a distinct difference in behaviour between the agents too: the higher the line stays, the more
+'rational' an agent appears. The PPO pair is the most well-performing (in terms of rewards): and PPO2 provides the highest
+explainability metrics. However, what the plot shows is that both agents HPPO and PPO1 (each of a different pair of agents tested together)
+are instead the ones below. Luckily, intentions can be used to debug or understand what is actually happening:
+
+The metrics introduce above are computed for the existence of 'any' intention being attributed. If instead they are 
+computed for a particular desire, we can see how the agent acts toward individual goals.
+
+For a given commitment-threshold of 0.5, here we show the PPO pair of the plot above:
+<img class="screenshot" src="assets/screenshots/intentions_simple-D24-C0.5.png">
+<img class="screenshot" src="assets/screenshots/intentions_simple-D44-C0.5.png">
+
+As we can see, the agents specialise between cooking (putting onions in the pot), and servicing! One can easily come up
+with an hypothesis of why this happens (when you know the game): the agents can collide with each-other, and in the cramped
+space of this layout, they would hinder each other were they both cooking or servicing. Therefore, agents don't appear 
+to behave 'rationally' with respect to the hypothesised desires during part of the time (with servicing being the least 
+common). We could add further desires to understand this better: for example, a desire to not be on the row of space
+closest to the pots when they are not doing their task.
+
+This can be used to debug both the agent and the explainability hypotheses.
+
+Finally, for a more 'visual' inspection, either the gif from the video or the plot below
+are useful tools to see intention progression through time, as the agent interacts with the environment, to
+as an alternate, visual explanation of agent behaviour.
+
+<img class="screenshot" src="assets/screenshots/REV_random0-D24-Traj2.png">
+
+
+# Conclusions
+
+We introduce the notion of _intention_ as a way to explain any agent architecture, understood as 'the probability that an agent will 
+bring about some desirable thing'. We do this motivated by the folk-conceptual theory of explanations, where intentions
+are both desire and belief of desire attainability. In our case, desires are explainee-dependant (so that the answer can
+be interpretable), and beliefs are grounded in a frequentist approach ensuring truthfulness, converting them to
+probabilities. We allow to trade-off interpretability and reliability with a tunable threshold, and provide
+metrics and tools for evaluating the technique.
+
+We apply it successfully to the Overcooked environment, with both artificial agents and even a simulacra of a human 
+agent.
+
+# Related work we've done
+This work is contextualised by how we believe explanation in agents should look like, being a particular
+rung in a [Ladder of Intentions](https://hpai-bsc.github.io/ladder-of-intentions/) (EXTRAAMAS'25), exploring one of the
+many facets of explainability in agents.
+
+Furthermore, beyond the case of Overcooked, this work has also been applied to non-artificial agents in a much more
+complex environment: human drivers in the real world, in [Explaining Autonomous Vehicles with IPGs](https://hpai-bsc.github.io/ipg4av/) (EXTRAAMAS'25).
 
 
 ### Cite as
