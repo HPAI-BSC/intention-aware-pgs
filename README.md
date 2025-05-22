@@ -2,6 +2,9 @@
 
 Gimenez-Abalos V., Alvarez-Napagao S., Tormos A., Cortes U., Vazquez-Salceda J. _Policy Graphs and Intention: answering ’why’ and ’how’ from a telic perspective_. In Proceedings of the 24rd International Conference on Autonomous Agents and Multiagent Systems (AAMAS '25). 
 
+Check the [webpage](https://hpai-bsc.github.io/intention-aware-pgs/) for explanations on what this does!
+
+
 > Agents are a special kind of AI-based software in that they interact in complex environments and have increased potential for emergent behaviour. Explaining such behaviour is key to deploying trustworthy AI, but the increasing complexity and opaque nature of many agent implementations makes this hard. In this work, we reuse the Policy Graphs method –which can be used to explain opaque agent behaviour– and enhance it to query it with hypotheses of desirable situations. These hypotheses are used to compute a numerical value to examine agent intentions at any particular moment, as a function of how likely the agent is to bring about a hypothesised desirable situation. We emphasise the relevance of how this approach has full epistemic traceability, and each belief used by the algorithms providing answers is backed by specific facts from its construction process. We show the numeric approach provides a robust and intuitive way to provide telic explainability (explaining current actions from the perspective of bringing about situations), and allows to evaluate the interpretability of behaviour of the agent based on the explanations; and it opens the door to explainability that is useful not only to the human, but to an agent.
 
 Included in this repository is a code for reproducing paper results, as well as more experimental results for other layouts, more 
